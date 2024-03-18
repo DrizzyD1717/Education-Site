@@ -1,0 +1,537 @@
+:root {
+  --pink: #ff046f;
+  --violet: #c63bfa;
+  /* --light-grey: rgb(97, 97, 97); */
+  --light-grey: rgb(140, 140, 140);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(rgba(198, 59, 250, 0.6), rgba(198, 59, 250, 0.6)),
+    url(./HomeBackground.webp) no-repeat;
+  width: 100vw;
+  background-attachment: fixed;
+  background-position: center;
+  object-fit: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Home Page Css */
+
+.home {
+  width: 100%;
+}
+
+/* Home Page Header Css */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 5%;
+  z-index: 2;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0 1rem 0 1rem;
+  margin: 1rem auto;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo .fa {
+  color: var(--pink);
+  font-size: 2rem;
+  display: inline-block;
+}
+
+header .logo h1 {
+  color: var(--violet);
+}
+
+header nav ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-right: 1rem;
+}
+
+header nav ul li a {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: var(--violet);
+}
+
+/* Home Page Header Css Ends */
+
+.home .top-part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+  margin: 4rem auto;
+  text-align: center;
+  color: white;
+}
+
+.home .top-part h2 {
+  font-size: 3rem;
+  margin: 1.5rem 0;
+}
+
+.home .top-part p {
+  font-size: 1.4 rem;
+}
+
+.home .top-part button {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: var(--pink);
+  border-radius: 20px;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+}
+
+.about {
+  width: 100%;
+  margin: 1.5rem auto;
+  text-align: center;
+  position: relative;
+}
+
+.boxes {
+  width: 70%;
+  max-width: 1200px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 1px black;
+}
+
+.about .fa {
+  font-size: 2rem;
+  display: inline-block;
+  background-color: var(--violet);
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.box h3 {
+  color: var(--pink);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.about::before {
+  content: "";
+  top: 25%;
+  left: -10%;
+  position: absolute;
+  width: 120%;
+  background-color: #fff;
+  border-top: 70vh solid white;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* Home Page Ends */
+/* About Page Begins */
+
+section.actual-about {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: white;
+  padding: 6rem;
+}
+
+/* section .actual-about h2 {
+  margin-top: 5rem;
+} */
+
+.actual-about h2,
+.actual-about h3 {
+  color: var(--pink);
+  text-align: center;
+}
+
+.actual-about h2 {
+  font-size: 2.5rem;
+}
+
+.actual-about .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 6rem 0;
+}
+
+.actual-about .content .left {
+  width: 50%;
+}
+
+.actual-about .content .left h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.actual-about .content .left p {
+  color: rgb(97, 97, 97);
+}
+
+.actual-about .content .left button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--violet);
+  color: white;
+  margin-top: 1.5rem;
+  border: none;
+  outline: none;
+}
+
+.actual-about .content .right {
+  width: 50%;
+}
+
+.actual-about .content .right img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* About Section Ends Here */
+/* Teachers Section Starts Here */
+
+section.teachers {
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  padding: 4rem 0rem;
+}
+
+.teachers h1 {
+  color: var(--pink);
+  font-size: 3rem;
+}
+
+.teachers h2 {
+  color: var(--light-grey);
+  font-size: 2rem;
+}
+
+.teachers h3 {
+  color: var(--pink);
+  margin-top: 0.3rem;
+}
+
+.teachers h4 {
+  color: var(--light-grey);
+  margin-top: 0.3rem;
+}
+
+.teachers-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin-top: 3rem;
+}
+
+.teacher {
+  background-color: rgb(237, 234, 230);
+  padding: 1rem;
+}
+
+.teachers-boxes .teacher img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+
+.teacher a {
+  text-decoration: none;
+  color: var(--pink);
+}
+
+.teacher .social-links {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+  margin-top: 0.5rem;
+}
+
+.teacher .social-links a {
+  padding-right: 0.5rem;
+  transition: 0.2s;
+}
+
+.teacher .social-links a:hover {
+  color: var(--violet);
+}
+
+/* Teachers Section Ends Here */
+
+/* Courses Section Starts here */
+
+section.courses-sec {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: white;
+}
+
+.courses-sec h2 {
+  font-size: 3rem;
+  color: var(--pink);
+}
+
+.courses-sec h3 {
+  font-size: 2rem;
+  color: var(--light-grey);
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem 1.5rem;
+  width: 70%;
+  margin: 3rem auto;
+}
+
+.course {
+  box-shadow: 2px 4px 4px var(--violet);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+}
+
+.course h3 {
+  font-size: 1.5rem;
+  color: var(--violet);
+  margin-bottom: 0.5rem;
+}
+
+.course p {
+  color: var(--light-grey);
+}
+
+/* Responsive Menu Codes Start here */
+.open-menu {
+  display: none;
+}
+
+.mobile-nav {
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 5;
+}
+
+.mobile-nav-holder {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav ul li {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.mobile-nav ul li a:hover {
+  color: var(--violet);
+}
+
+.mobile-logo {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.fa-circle-xmark {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Contact Us Section */
+section.contact-sec {
+  background-color: black;
+  padding: 3rem 0;
+}
+
+.contact-sec h2,
+.contact-sec h3 {
+  text-align: center;
+}
+
+.contact-sec h3 {
+  color: var(--pink);
+  font-size: 1.5rem;
+}
+
+.contact-sec h2 {
+  color: var(--light-grey);
+  font-size: 2.5rem;
+}
+
+.contact-form {
+  width: 80%;
+  padding: 3rem 1rem;
+  margin: 0 auto;
+}
+
+.contact-form input {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  max-height: 200px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.contact-form button {
+  background-color: var(--pink);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  outline: none;
+  border: none;
+}
+/* Contact Us Section Ends Here */
+
+/* Responsive Css 
+Starts Here */
+
+@media (max-width: 1000px) {
+  .teachers-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .boxes {
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 100%;
+  }
+  .courses {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Responsive Menu Codes Start here */
+
+  .main-nav {
+    display: none;
+  }
+
+  .open-menu {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--violet);
+  }
+  .mobile-nav {
+    display: block;
+  }
+  header {
+    padding-right: 4rem;
+  }
+  /* Responsive Menu Codes End here */
+}
+/* Another Layer
+Just extra spacing */
+
+@media (max-width: 500px) {
+  .teachers-boxes {
+    grid-template-columns: 1fr;
+  }
+  .actual-about .content {
+    flex-direction: column;
+  }
+  .actual-about .content .left,
+  .actual-about .content .right {
+    width: 100%;
+  }
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .box {
+    margin-bottom: 1rem;
+  }
+  .courses {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Header onscroll feature */
+
+.scroll {
+  width: 100%;
+  border-radius: 0;
+  border-bottom: 1px solid var(--light-grey);
+  left: 0;
+  margin: 0;
+}
+
+/* Responsive Menu Codes Start here */
+
+.hide {
+  display: none;
+}
